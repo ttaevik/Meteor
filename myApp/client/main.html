@@ -1,0 +1,31 @@
+
+<head>
+  <title>Chatroom</title>
+</head>
+
+<body>  
+  <h1>Chatroom</h1>
+  
+  {{> input }}
+  <br>
+  {{> messages }}
+  
+</body>
+
+
+<template name="messages">
+  {{#each messages}}
+    <strong>{{name}}:</strong> {{message}} <br>
+    <small>lisatud:{{time}}<br></small> 
+  {{/each}}
+</template>
+
+<template name="input">
+  <strong>Nimi: <input type="text" id="username"></strong><br>
+  <small>nime mitte sisestamisel postitate anonüümselt</small><br>
+  <strong>Sisesta sõnum: <input type="text" id="message"></strong><br>
+  <small>sõnumi saatmiseks vajutage enter</small><br>
+  
+</template>
+
+
